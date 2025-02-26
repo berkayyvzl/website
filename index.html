@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANA SAYFA | As Hidrolik İş Makinaları San. Tic. Ltd. Şti</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    .swiper-container {
+      height: 350px; /* Slider yüksekliğini ayarlayın */
+      margin-bottom: 150px; /* Daha fazla boşluk için margin-bottom eklendi */
+    }
+    .swiper-slide {
+      height: 125%; /* Slaytların yüksekliğini slider yüksekliğine göre ayarlayın */
+    }
+    .swiper-slide video, .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Nav bar başlangıç stili */
+    #navbar {
+      transition: all 0.3s ease;
+      top: 50px; /* Top bar yüksekliği kadar aşağıda */
+      position: fixed;
+      width: 100%;
+      z-index: 50;
+    }
+    /* Nav bar iç kapsayıcı */
+    .nav-container {
+      transition: all 0.3s ease;
+      padding-top: 1.5rem;  /* Yaklaşık 24px */
+      padding-bottom: 1.5rem;
+    }
+    /* Kaydırma sonrası küçülen nav bar */
+    #navbar.scrolled {
+      top: 0; /* Ekranın en üstüne */
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    #navbar.scrolled .nav-container {
+      padding-top: 0.5rem;  /* Yaklaşık 8px */
+      padding-bottom: 0.5rem;
+    }
+    /* Hover effect for nav items */
+    .nav-item:hover {
+      background-color: #e2e8f0;
+      border-radius: 0.375rem;
+    }
+    .logo {
+  transition: all 0.3s ease;
+  height: 50px; /* Başlangıç yüksekliği */
+}
+#navbar.scrolled .logo {
+  height: 40px; /* Kaydırma sonrası küçülen logo yüksekliği */
+}
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Top Bar: Sosyal Medya & EN Butonu, Arama, Konum -->
+  <div class="bg-white-800 text-black">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com" target="_blank" class="hover:text-blue-800">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="hover:text-blue-800">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="hover:text-blue-800">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <!-- Arama Çubuğu -->
+        <input type="text" placeholder="Ara..." class="border rounded px-2 py-1 focus:outline-none">
+         <!-- Konum Butonu: tıklandığında "Bize Ulaşın" sayfasını açar -->
+         <button onclick="window.location.href='contact.html'" class="border rounded px-2 py-1 hover:bg-blue-100">
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+        <a href="index-en.html" class="bg-blue-800 hover:bg-blue-600 text-white py-1 px-3 rounded">EN</a>
+      </div>
+    </div>
+  </div>
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-white shadow fixed w-full z-50">
+  <div class="nav-container container mx-auto px-6 flex justify-between items-center">
+    <div class="flex-1">
+      <a href="index.html">
+        <!-- Logo görseli: başlangıçta yüksekliği 50px, kaydırıldığında 30px'e düşecek -->
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <div class="space-x-4">
+      <a href="index.html" class="nav-item px-3 py-2 hover:text-blue-500">ANA SAYFA</a>
+      <a href="about.html" class="nav-item px-3 py-2 hover:text-blue-500">HAKKIMIZDA</a>
+      <a href="products.html" class="nav-item px-3 py-2 hover:text-blue-500">ÜRÜNLERİMİZ</a>
+      <a href="contact.html" class="nav-item px-3 py-2 hover:text-blue-500">BİZE ULAŞIN</a>
+    </div>
+    <div class="flex-1"></div>
+  </div>
+</nav>
+
+  <!-- Spacer to prevent content overlap -->
+  <div class="h-24"></div>
+
+  <!-- Ana Sayfa Slider -->
+  <div class="swiper-container mt-4">
+    <div class="swiper-wrapper">
+      <!-- Slayt 1: Ürün Fotoğrafı -->
+      <div class="swiper-slide relative">
+        <img src="https://via.placeholder.com/1500x600?text=Ürün+Fotoğrafı+1" alt="Ürün Fotoğrafı 1" class="w-full">
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-30">
+          <h2 class="text-4xl font-bold text-white">Ürünümüzle Fark Yaratın</h2>
+          <p class="mt-2 text-white">En kaliteli ve modern çözümler burada.</p>
+        </div>
+      </div>
+      <!-- Slayt 2: Ürün Videosu -->
+      <div class="swiper-slide relative">
+        <video class="w-full" autoplay muted loop>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-30">
+          <h2 class="text-4xl font-bold text-white">Göz Alıcı Görseller</h2>
+          <p class="mt-2 text-white">Her anı canlı hissetmenizi sağlıyoruz.</p>
+        </div>
+      </div>
+      <!-- Ek slaytlar eklenebilir -->
+    </div>
+    <!-- Slider Navigasyonu -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Slider Altı CTA Bölümü -->
+  <div class="container mx-auto px-4 py-10 text-center">
+    <h2 class="text-3xl font-bold mb-4">En son teknolojiyi, şıklığı ve kaliteyi bir arada sunan ürünlerimizle tanışın.</h2>
+    <p class="mt-2 text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue neque id mi vulputate, vitae pharetra arcu lobortis. Integer lobortis purus ultrices, venenatis erat tempus, laoreet arcu. Nullam ornare lacinia ligula. Etiam fringilla, dolor nec volutpat rutrum, felis justo venenatis magna, at venenatis lectus metus gravida ligula. Aenean velit magna, sollicitudin vitae lectus eget, eleifend fringilla nisl. Pellentesque et dui a urna condimentum iaculis pulvinar ut lorem. Quisque fermentum ac mauris in mattis. Morbi id enim eros. Curabitur facilisis fringilla aliquet. Quisque vitae ante et mauris aliquet pellentesque. Vivamus eleifend, velit id porta venenatis, lectus purus blandit tellus, ut faucibus sem est nec neque. Nunc volutpat elit eros.Ut a diam sit amet tellus blandit pellentesque. Nulla at tristique libero, in porta ex. Curabitur sit amet nunc id eros porta molestie. Morbi tincidunt sed risus non fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris ullamcorper, nibh ac efficitur ultricies, felis quam tincidunt eros, quis blandit lacus metus non lacus. Mauris faucibus volutpat porta. Donec sodales massa et ligula egestas iaculis. Proin maximus, ligula imperdiet interdum egestas, leo turpis molestie risus, a lobortis dolor neque a purus. Aenean ut lectus nec neque maximus ullamcorper. Mauris tincidunt purus nisi, id pulvinar nulla tristique vel. Fusce at justo ligula. Donec rutrum molestie tortor porttitor auctor. Curabitur massa ante, commodo sit amet tincidunt nec, scelerisque in libero.</p>
+    <br />
+    <a href="products.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded">Ürünlerimizi Keşfedin</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-600 text-gray-200 py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 As Hidrolik İş Makinaları San. Tic. Ltd. Şti. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- JS Kütüphaneleri -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      autoplay: { delay: 5000 }
+    });
+    // Sticky nav bar on scroll with dynamic top adjustment and shrink effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if(window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

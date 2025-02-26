@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BİZE ULAŞIN | As Hidrolik İş Makinaları San. Tic. Ltd. Şti</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+      .swiper-container {
+        height: 350px; /* Slider yüksekliğini ayarlayın */
+        margin-bottom: 150px; /* Daha fazla boşluk için margin-bottom eklendi */
+      }
+      .swiper-slide {
+        height: 125%; /* Slaytların yüksekliğini slider yüksekliğine göre ayarlayın */
+      }
+      .swiper-slide video, .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* Nav bar başlangıç stili */
+      #navbar {
+        transition: all 0.3s ease;
+        top: 50px; /* Top bar yüksekliği kadar aşağıda */
+        position: fixed;
+        width: 100%;
+        z-index: 50;
+      }
+      /* Nav bar iç kapsayıcı */
+      .nav-container {
+        transition: all 0.3s ease;
+        padding-top: 1.5rem;  /* Yaklaşık 24px */
+        padding-bottom: 1.5rem;
+      }
+      /* Kaydırma sonrası küçülen nav bar */
+      #navbar.scrolled {
+        top: 0; /* Ekranın en üstüne */
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      #navbar.scrolled .nav-container {
+        padding-top: 0.5rem;  /* Yaklaşık 8px */
+        padding-bottom: 0.5rem;
+      }
+      /* Hover effect for nav items */
+      .nav-item:hover {
+        background-color: #e2e8f0;
+        border-radius: 0.375rem;
+      }
+      .logo {
+    transition: all 0.3s ease;
+    height: 50px; /* Başlangıç yüksekliği */
+  }
+  #navbar.scrolled .logo {
+    height: 40px; /* Kaydırma sonrası küçülen logo yüksekliği */
+  }
+    </style>
+  </head>
+  
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Top Bar: Sosyal Medya & EN Butonu, Arama, Konum -->
+    <div class="bg-white-800 text-black">
+      <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com" target="_blank" class="hover:text-blue-800">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="hover:text-blue-800">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="hover:text-blue-800">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <!-- Arama Çubuğu -->
+          <input type="text" placeholder="Ara..." class="border rounded px-2 py-1 focus:outline-none">
+           <!-- Konum Butonu: tıklandığında "Bize Ulaşın" sayfasını açar -->
+           <button onclick="window.location.href='contact.html'" class="border rounded px-2 py-1 hover:bg-blue-100">
+            <i class="fas fa-map-marker-alt"></i>
+          </button>
+          <a href="index-en.html" class="bg-blue-800 hover:bg-blue-600 text-white py-1 px-3 rounded">EN</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="bg-white shadow fixed w-full z-50">
+  <div class="nav-container container mx-auto px-6 flex justify-between items-center">
+    <div class="flex-1">
+      <a href="index.html">
+        <!-- Logo görseli: başlangıçta yüksekliği 50px, kaydırıldığında 30px'e düşecek -->
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <div class="space-x-4">
+      <a href="index.html" class="nav-item px-3 py-2 hover:text-blue-500">ANA SAYFA</a>
+      <a href="about.html" class="nav-item px-3 py-2 hover:text-blue-500">HAKKIMIZDA</a>
+      <a href="products.html" class="nav-item px-3 py-2 hover:text-blue-500">ÜRÜNLERİMİZ</a>
+      <a href="contact.html" class="nav-item px-3 py-2 hover:text-blue-500">BİZE ULAŞIN</a>
+    </div>
+    <div class="flex-1"></div>
+  </div>
+</nav>
+  
+  <div class="h-24"></div>
+
+  <!-- İletişim İçeriği -->
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold mb-6 text-center">Bize Ulaşın</h1>
+    <div class="mb-10">
+      <!-- Hakkımızda -->
+<div class="bg-white p-6 shadow-lg rounded-lg" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold mb-4">İletişim Bilgileri</h2>
+  <p class="text-gray-700"><strong>Telefon:</strong> +90 123 456 7890</p>
+  <p class="text-gray-700"><strong>E-posta:</strong> info@ornek.com</p>
+  <p class="text-gray-700"><strong>Adres:</strong> Örnek Mah. No: 1, İstanbul, Türkiye</p>
+</div>
+    </div>
+    <!-- Google Maps Embed -->
+    <div class="mb-10" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">Adresimiz</h2>
+      <div class="w-full" style="height: 400px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d340.1654604454403!2d28.80008212280498!3d41.08733840980184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1740591210108!5m2!1str!2st" 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          style="border:0;" 
+          allowfullscreen="" 
+          aria-hidden="false"
+          title="Google Maps"
+        ></iframe>
+        <br>
+        <a 
+          class="block text-center mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-10" 
+          href="https://www.google.com/maps/dir/?api=1&destination=41.08735635153832,28.800085475566963" 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        Yol Tarifi Al
+        </a>
+        <div style="margin-bottom: 40px;"></div>
+      </div> 
+    </div>
+    <div class="h-24"></div>
+    <!-- Teklif Formu -->
+    <div class="teklif-formu-container" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">Teklif Verin</h2>
+      <form action="/teklif-gonder" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="isim">Adınız Soyadınız</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="isim" type="text" placeholder="Adınız Soyadınız" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">E-posta Adresiniz</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="email" type="email" placeholder="Email Adresiniz" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="mesaj">Mesajınız</label>
+          <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="mesaj" rows="4" placeholder="Detaylarınızı buraya yazın..." required></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="submit">Gönder</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 As Hidrolik İş Makinaları San. Tic. Ltd. Şti. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- JS Kütüphaneleri -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if(window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
